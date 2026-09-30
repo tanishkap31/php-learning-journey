@@ -90,9 +90,47 @@ Requirements:
    * 'B' for 80 to 89.
    * 'C' for 70 to 79.
    * 'F' for anything below 70.
-• Test it: Create a student named "Alex" for the subject "Math" with the scores [85, 92, 78, 90]. Print out their name, average score, and final letter grade.  */
-ANS: 
+• Test it: Create a student named "Alex" for the subject "Math" with the scores [85, 92, 78, 90]. Print out their name, average score, and final letter grade.  
+ANS:
 */
+
+class Student {
+
+    public string $studentName;
+    public string $subject;
+    public array $scores;
+
+    public function __construct($studentName, $subject, $scores) {
+        $this->studentName = $studentName;
+        $this->subject = $subject;
+        $this->scores = $scores;
+    }
+
+    public function calculateAverage() {
+        return array_sum($this->scores) / count($this->scores);
+    }
+
+    public function getGrade() {
+        $average = $this->calculateAverage();
+
+        if ($average >= 90) {
+            return "A";
+        } elseif ($average >= 80) {
+            return "B";
+        } elseif ($average >= 70) {
+            return "C";
+        } else {
+            return "F";
+        }
+    }
+}
+
+$student = new Student("Alex", "Math", [85, 92, 78, 90]);
+
+echo "Name: " . $student->studentName . "\n";
+echo "Subject: " . $student->subject . "\n";
+echo "Average: " . $student->calculateAverage() . "\n";
+echo "Grade: " . $student->getGrade(); 
 
   
 
