@@ -202,6 +202,10 @@ class WhatsApp extends Apps {
         echo $res;
     }
 }
+// Runtime Polymorphism
+function login(Apps $app){
+    $app->credentials();
+}
 
 $linkedin = new Linkedin();
 
