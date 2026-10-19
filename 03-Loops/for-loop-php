@@ -1,1 +1,54 @@
 
+<?php
+
+// for loop:range
+/* for(initialization; condition; incr/decr){
+    // logic body
+} */
+
+// reverse no 
+     for($n=10; $n>=2; $n--){
+        echo $n;
+    } 
+// find even odd from 1 to 100
+ for($n=1; $n<=100; $n++){
+       if($n %2 ==0){
+        echo"even";
+    }
+    else{
+        echo"odd";
+    } 
+    } 
+
+// 1 to 20  find prime no
+ for($n=2; $n<=20; $n++){
+       $count=0;
+       for($i= 1; $i<=$n; $i++){
+        if($n %$i == 0){
+            $count++;
+    } 
+}
+if ($count == 2){
+    echo $n."";
+}
+} 
+    
+// POTD display 1-15 no uing for loop nd seprsted by hypen
+ for ($n = 1; $n <=15; $n++) {
+    echo $n;
+    if($n<15){
+        echo "-";
+    }
+} 
+
+// 1 to 5 using  break statement
+
+ for($n=1;$n<=5;$n++){
+    if($n==3) break;
+    echo $n;
+    
+} 
+
+?>
+
+?>
