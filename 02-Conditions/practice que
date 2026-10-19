@@ -1,0 +1,58 @@
+<?php
+// question 1
+$price = 100;
+$discount = 100*(15/100);
+
+
+$Product_Price = $price - $discount;
+echo $Product_Price;
+
+// question 2
+$score = 50;
+$result = ($score + 20) / 2;
+echo $result;
+
+//question 3
+$secretPin= 1234;
+$userInput= "1234";
+var_dump($secretPin == $userInput);
+var_dump($secretPin === $userInput);
+
+//question 4;
+$a = 40;
+$result = ($a <100)? "Lesser" : "Greater";
+echo $result;
+
+//question 5 
+$x = 5;
+$y = $x++;
+$z = ++$x;
+echo "$x\n";
+echo "$y\n";
+echo "$y";
+
+//question 6
+$firstname = "John";
+$lastname =  "Doe" ;
+$fullname = $firstname." ".$lastname;
+echo $fullname;
+
+//question 7
+$a = 10;
+$b = 20;
+$c = 30;
+var_dump( $a <=> $b);
+var_dump($b <=> $b);
+var_dump($c <=> $b);
+
+//question 8
+$isLoggedIn = true;
+$result = ($isLoggedIn = false)? "Welcome Back!" : "Please Log in";
+echo $result;
+
+//question 9
+$a = 17;
+$result = ( $a % 2==0)? "Even" : "odd";
+echo $result;
+
+?>
